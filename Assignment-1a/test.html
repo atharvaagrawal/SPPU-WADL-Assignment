@@ -1,0 +1,331 @@
+<html>
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <title>E-Commerce Website</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./index.css" />
+    <!-- The above code defines a meta tag that tells the browser to set the width of the website according to the device width. It also set scaling to 1 which equates to default website. In short, we tell the browser that we are going to build a responsive website. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      @media screen and (min-width: 480px) {
+        .start {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- <div class="col-2 mt-lg-5" id="start" class="hidden-xs">
+               <div class="card overlay" id="myNav">
+                  <h4 class="card-header bg-dark text-white">Admin Navigation</h4>
+                  <ul class="list-group overlay-content">
+                     <li class="list-group-item">
+                        <Link class="nav-link text-success" to="/admin/create/category">
+                        Create Categories
+                        </Link>
+                     </li>
+                     <li class="list-group-item">
+                        <Link class="nav-link text-success" to="/admin/categories">
+                        Manage Categories
+                        </Link>
+                     </li>
+                     <li class="list-group-item">
+                        <Link class="nav-link text-success" to="/admin/create/product">
+                        Create Product
+                        </Link>
+                     </li>
+                     <li class="list-group-item">
+                        <Link class="nav-link text-success" to="/admin/products">
+                        Manage Products
+                        </Link>
+                     </li>
+                     <li class="list-group-item">
+                        <Link class="nav-link text-success" to="/admin/orders">
+                        Manage Orders
+                        </Link>
+                     </li>
+                  </ul>
+               </div>
+               <hr>
+            </div> -->
+        <div class="col-12">
+          <div class="col py-3">
+            <!-- Main Content -->
+            <div class="row">
+              <header class="border border-success p-2 mb-2">
+                <div class="container bg-dark">
+                  <nav class="navbar w-100 navbar-dark navbar-expand-sm">
+                    <a href="#" class="navbar-brand">Brand-Logo</a>
+                    <button
+                      class="navbar-toggler"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#menuItems"
+                      aria-controls="menuItems"
+                      aria-expanded="false"
+                      aria-label="Toggle Navigation"
+                    >
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <h1 class="text-center">T-Shirt</h1>
+                    <div
+                      class="collapse navbar-collapse float-left"
+                      id="menuItems"
+                    >
+                      <ul class="navbar-nav">
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">Help</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
+                </div>
+              </header>
+            </div>
+            <div class="row">
+              <!-- Column -->
+              <div class="col-lg-3 col-md-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">ORDER RECEIVED</h4>
+                    <div class="text-end">
+                      <span class="text-muted">Todays Order</span>
+                      <h1 class="font-light">
+                        <sup><i class="ti-arrow-up text-success"></i></sup>
+                        12,000
+                      </h1>
+                    </div>
+                    <span class="text-success">20%</span>
+                    <div class="progress">
+                      <div
+                        class="progress-bar bg-success"
+                        role="progressbar"
+                        style="width: 20%; height: 6px"
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Column -->
+              <!-- Column -->
+              <div class="col-lg-3 col-md-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">TAX DEDUCATION</h4>
+                    <div class="text-end">
+                      <span class="text-muted">Monthly Deduction</span>
+                      <h1 class="font-light">
+                        <sup><i class="ti-arrow-up text-primary"></i></sup>
+                        ₹5,000
+                      </h1>
+                    </div>
+                    <span class="text-primary">30%</span>
+                    <div class="progress">
+                      <div
+                        class="progress-bar bg-primary"
+                        role="progressbar"
+                        style="width: 30%; height: 6px"
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Column -->
+              <!-- Column -->
+              <div class="col-lg-3 col-md-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">REVENUE STATS</h4>
+                    <div class="text-end">
+                      <span class="text-muted">Todays Income</span>
+                      <h1 class="font-light">
+                        <sup><i class="ti-arrow-down text-info"></i></sup>
+                        ₹8,000
+                      </h1>
+                    </div>
+                    <span class="text-info">60%</span>
+                    <div class="progress">
+                      <div
+                        class="progress-bar bg-info"
+                        role="progressbar"
+                        style="width: 60%; height: 6px"
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Column -->
+              <!-- Column -->
+              <div class="col-lg-3 col-md-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">YEARLY SALES</h4>
+                    <div class="text-end">
+                      <span class="text-muted">Yearly Income</span>
+                      <h1 class="font-light">
+                        <sup><i class="ti-arrow-up text-inverse"></i></sup>
+                        ₹12,000
+                      </h1>
+                    </div>
+                    <span class="text-inverse">90%</span>
+                    <div class="progress">
+                      <div
+                        class="progress-bar bg-inverse"
+                        role="progressbar"
+                        style="width: 90%; height: 6px"
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Column -->
+            </div>
+            <div class="row">
+              <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Product Overview</h4>
+                    <div class="table-responsive m-t-30">
+                      <table class="table product-overview">
+                        <thead>
+                          <tr>
+                            <th>Customer</th>
+                            <th>Order ID</th>
+                            <th>Photo</th>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <!-- <th>Actions</th> -->
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Steave Jobs</td>
+                            <td>#85457898</td>
+                            <td>
+                              <img
+                                src="./img/chair.jpg"
+                                alt="iMac"
+                                width="80"
+                              />
+                            </td>
+                            <td>Rounded Chair</td>
+                            <td>20</td>
+                            <td>10-7-2023</td>
+                            <td>
+                              <span class="badge bg-success">Paid</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Varun Dhavan</td>
+                            <td>#95457898</td>
+                            <td>
+                              <img
+                                src="./img/chair2.jpg"
+                                alt="iPhone"
+                                width="80"
+                              />
+                            </td>
+                            <td>Wooden Chair</td>
+                            <td>25</td>
+                            <td>09-7-2023</td>
+                            <td>
+                              <span class="badge bg-warning">Pending</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Ritesh Desh</td>
+                            <td>#68457898</td>
+                            <td>
+                              <img
+                                src="./img/chair3.jpg"
+                                alt="apple_watch"
+                                width="80"
+                              />
+                            </td>
+                            <td>Gray Chair</td>
+                            <td>12</td>
+                            <td>08-7-2023</td>
+                            <td>
+                              <span class="badge bg-success">Paid</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Hrithik</td>
+                            <td>#45457898</td>
+                            <td>
+                              <img
+                                src="./img/chair4.jpg"
+                                alt="mac_mouse"
+                                width="80"
+                              />
+                            </td>
+                            <td>Pure Wooden chair</td>
+                            <td>18</td>
+                            <td>02-7-2023</td>
+                            <td>
+                              <span class="badge bg-danger">Failed</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Footer Section -->
+          <footer class="bg-dark">
+            <div class="row">
+              <div class="col-6 text-white">
+                <h2>Get to Know Us</h2>
+                <ul class="list-group">
+                  <li class="list-group-item">About Us</li>
+                  <li class="list-group-item">Careers</li>
+                </ul>
+              </div>
+              <div class="col-6 text-white">
+                <h2>Connect With Us</h2>
+                <ul class="list-group">
+                  <li class="list-group-item"><a href="#"> Twitter</a></li>
+                  <li class="list-group-item"><a href="#"> Insta</a></li>
+                  <li class="list-group-item"><a href="#"> Youtube</a></li>
+                </ul>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

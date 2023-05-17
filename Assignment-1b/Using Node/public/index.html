@@ -1,0 +1,109 @@
+<html>
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <title>AJAX Request Demo</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <h2 class="text-center">User Registration Form</h2>
+      </div>
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+          <form action="">
+            <div class="mb-3 mt-3">
+              <label for="name" class="form-label">Enter Name:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Enter Your Name"
+                name="name"
+              />
+            </div>
+
+            <div class="mb-3 mt-3">
+              <label for="email" class="form-label">Email:</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Enter email"
+                name="email"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="pwd" class="form-label">Password:</label>
+              <input
+                type="password"
+                class="form-control"
+                id="pwd"
+                placeholder="Enter password"
+                name="pwd"
+              />
+            </div>
+            <input
+              type="button"
+              onclick="submitForm()"
+              name="submit"
+              value="Submit"
+              id="submit"
+              class="btn btn-primary"
+            />
+          </form>
+        </div>
+        <div class="col-3"></div>
+      </div>
+
+      <p id="lblResponse"></p>
+    </div>
+
+    <script type="text/javascript">
+      function submitForm() {
+        var name = $("input[name=name]").val();
+        var email = $("input[name=email]").val();
+        var pwd = $("input[name=pwd]").val();
+
+        const data = { name: name, email: email, pwd: pwd };
+
+        console.log("he", data);
+
+        $.ajax({
+          type: "POST",
+          url: "http://localhost:3000/request",
+          data: data,
+
+          success: function (data) {
+            $("#lblResponse").text(JSON.stringify(data));
+            console.log("Success: ");
+
+            var new_window = window.open(null, "", "_self");
+            new_window.document.write(JSON.stringify(data));
+
+            // w = window.open();
+            // w.document.body.innerHTML = "<h1>User Details</h1><h3>";
+            // w.document.body.innerHTML += string;
+            // w.document.body.innerHTML += "</h3>";
+          },
+
+          error: function (xhr, status, error) {
+            console.log("Error: " + error.message);
+            // $("#lblResponse").html("Error connecting to the server.");
+          },
+        });
+      }
+    </script>
+  </body>
+</html>
