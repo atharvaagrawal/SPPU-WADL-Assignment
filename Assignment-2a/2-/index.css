@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cls-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(178, 196, 182);
+    color: white;
+}
+
+nav{
+    background-color: rgb(72, 164, 207);
+    color: white;
+    padding: 35px;
+}
+
+div.logo {
+    font-size: 25px;
+}
+
+.navlinks li{
+    list-style: none;
+    padding: 10px;
+}
